@@ -17,7 +17,7 @@ var Post = new keystone.List('Post', {
 Post.add({
 	title: { type: String, required: true },
 	slug: { type: String, index: true },
-	tweeted: {type: Boolean, default: false}
+	tweeted: {type: Boolean, default: false},
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	author: { type: Types.Relationship, ref: 'User', index: true },
 	publishedDate: { type: Types.Date, index: true },
