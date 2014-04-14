@@ -21,10 +21,11 @@
 var _ = require('underscore'),
 	keystone = require('keystone'),
 	middleware = require('./middleware'),
-	importRoutes = keystone.importer(__dirname);
-
+importRoutes = keystone.importer(__dirname),
+sts = require('strict-transport-security');
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
+keystone.pre('routes', sts.getSTS({"max-age":{days:30}}));
 keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
