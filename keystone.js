@@ -13,7 +13,7 @@ keystone.init({
 	
 	'name': 'Jonah\'s Website',
 	'brand': 'Jonah\'s Website',
-	
+	'port': 7777,
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
@@ -26,8 +26,13 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': '5x:`sV#-.qRtl-RV*gz&KN}TWKsLV,>TmaeO_$b6TcvD[uLdTA*|BDi`d{[fp<g*'
-	
+        'cookie secret': '5x:`sV#-.qRtl-RV*gz&KN}TWKsLV,>TmaeO_$b6TcvD[uLdTA*|BDi`d{[fp<g*',
+        'ssl': false,
+    'ssl key': '/home/jonah/servernopass.key',
+    'ssl port': 443,
+    'ssl cert': '/home/jonah/jonahback_com.crt'
+
+        
 });
 
 // Load your project's Models

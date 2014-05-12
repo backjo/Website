@@ -33,8 +33,7 @@ exports.initLocals = function(req, res, next) {
 	];
 	
 	locals.user = req.user;
-	
-	next();
+    next();
 	
 };
 
@@ -44,7 +43,7 @@ exports.initLocals = function(req, res, next) {
 */
 
 exports.flashMessages = function(req, res, next) {
-	
+    
 	var flashMessages = {
 		info: req.flash('info'),
 		success: req.flash('success'),
